@@ -1,0 +1,207 @@
+/*reset CSS*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*barra de navegação*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    padding: 1rem;
+}
+
+header img{
+    width: 80px;
+}
+
+header nav ul{
+    display: flex;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+
+header nav ul li a{
+    color: rgb(22, 41, 22);
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+header a:hover, header a.active {
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+header nav ul li a:hover{
+    color: rgb(3, 128, 3);
+    transition: 0.5s;
+}
+
+.changeColor .color{
+    width: 20px;
+    border-radius: 5px;
+}
+
+
+/*Quiz*/
+
+.resultado{
+    border: 1px solid white;
+    color: #fff;
+    background-color: rgb(22, 41, 22);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+/*Forms do contato*/
+
+.cPai-formContato{
+    padding: 50px;
+}
+
+.container-form{
+    background-color: rgb(79, 206, 174);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.container-form h2{
+    color: rgb(28, 85, 63);
+    padding: 5px;
+}
+
+.formulario input, .formulario button, .formulario label{
+    display: block;
+    padding: 5px;
+    color: rgb(22, 41, 22);
+}
+
+#btn-submit{
+    background-color: rgb(22, 41, 22);
+    border-radius: 10px;
+    width: 190px;
+    margin: 10px;
+    color: #fff;
+}
+
+
+/*Login*/
+
+.body1{
+    background: url('https://arayara.org/wp-content/uploads/2023/08/DreamShaper_v7_renewable_energy_industry_making_big_money_0-1.jpg') no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /*vh responsivo, ele pega de acordo com o tamanho da tela*/
+    background-size: cover;
+    background-position: center;
+}
+
+.main-login{
+    background: rgb(30, 56, 148);
+    width: 30%;
+    border: 2px solid rgb(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    background: transparent;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header h1{
+    color: #fff;
+}
+
+.controle{ /*ateção ás propriedades que fazem a mesma coisa*/
+    padding-bottom: 10px;
+    position: relative; /*não deixa outros elementos ficarem por cima dele*/
+}
+
+.form .controle ::placeholder{
+    font-size: 0.8rem
+}
+
+.controle label{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+}
+
+.controle input{
+    border: 2px solid rgb(185, 185, 185);
+    border-radius: 5px;
+    width: 70%;
+    height: 30px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.controle.error i.error{
+    visibility: visible;
+    font-size: 10px;
+}
+
+.controle.sucesso i.sucesso{
+    visibility: visible;
+}
+
+.controle.error small{
+    flex-direction: column;
+    color: #2d302d;
+    font-size: 10px;
+    visibility: visible;
+}
+
+.controle i{
+    position: absolute; /*fica uma img por cima da outra, mas é assim mesmo pois queremos usar somente aquele espaço para as mensagens, ou error ou sucesso*/
+    top: 4px;
+    right: 10px;
+    visibility: hidden; /*ocultando as imgs*/
+}
+
+.controle small{
+    visibility: hidden;
+    position: absolute;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #fff;
+}
+
+.form{
+    padding: 0 40px 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.form button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.form button:hover{
+    background: rgb(56, 80, 68);
+    color: rgb(255, 255, 255);
+    transition: 0.7s;
+}
+
+.form button:not(:hover){
+    transition: 1s;
+    background-color: rgba(18, 114, 69, 0.959);
+}
