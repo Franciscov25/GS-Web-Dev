@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/assets/logo-verde-cnxs.png">
+    <title>Contato</title>
+    <!--chamando o CSS externo-->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script>
+        function botaoenviar() {
+            var input = document.getElementById('nome').value;
+            var input = document.getElementById('telefone').value;
+            var input = document.getElementById('email').value;
+        
+            alert("Dados enviados com sucesso");
+        
+            document.getElementById('nome').value = '';
+            document.getElementById('telefone').value = '';
+            document.getElementById('email').value = '';
+        }  
+
+        // Função para trocar o background color
+
+        function trocar(color){
+            document.body.style.background = color;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="./src/assets/logo-verde-cnxs.png" alt="logo-da-equipe">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./solucao.html">Nossa Solução</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <div class="changeColor">
+                    <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
+                    <input type="button" class="color" onclick="trocar('#ea8145')"/>
+                    <input type="button" class="color" onclick="trocar('#2c4969')"/>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cPai-formContato">
+        <div class="container-form">
+            <h2>Preencha o formulário e entre em contato conosco!</h2>
+            <form class="formulario">
+                <label for="nome"><b>Nome:</b></label>
+                <input type="text" name="nome" id="nome" required/>
+                <label for="telefone"><b>Telefone:</b></label>
+                <input type="tel" name="telefone" id="telefone" required/>
+                <label for="email"><b>Email:</b></label>
+                <input type="email" name="email" id="email" required/>
+                <input type="submit" name="enviar" id="btn-submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
