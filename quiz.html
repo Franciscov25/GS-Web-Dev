@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="shortcut icon" href="./src/assets/logo.png">
+    <!--chamando o CSS externo-->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script>
+        //quiz 
+        document.addEventListener("DOMContentLoaded", function() {
+        alert("Seja bem-vindo ao quiz");
+
+        const perguntas = [
+            { perguntas: "1. O que caracteriza uma fonte de energia renovável? \n a) É uma fonte de energia que se esgota rapidamente com o tempo. \n b) É uma fonte de energia que é abundante e se renova naturalmente. \n c) É uma fonte de energia que depende de combustíveis fósseis.", resposta: "b" },
+            { perguntas: "2. Qual das seguintes fontes de energia é considerada uma energia limpa? \n a) Energia solar \n b) Energia nuclear \n c) Energia a carvão", resposta: "a" },
+            { perguntas: "3. O que é energia eólica? \n a) Energia gerada pelo calor da Terra. \n b) Energia gerada a partir do movimento das águas. \n c) Energia gerada pelo movimento do vento.", resposta: "c" },
+            { perguntas: "4. Qual das alternativas é uma vantagem da energia solar? \n a) Ela depende de recursos limitados. \n b) Ela pode ser gerada durante a noite. \n c) Ela não emite gases poluentes durante a geração de eletricidade.", resposta: "c" },
+            { perguntas: "5. O que é a biomassa? \n a) Energia gerada a partir do calor do interior da Terra. \n b) Matéria orgânica utilizada para gerar energia. \n c) Energia proveniente do movimento das marés.", resposta: "b" },
+            { perguntas: "6. Qual é o principal benefício da utilização da energia hidroelétrica? \n a) Redução da emissão de gases de efeito estufa. \n b) Consome grandes quantidades de combustível fóssil. \n c) Necessita de grandes áreas de terra cultivável.", resposta: "a" },
+            { perguntas: "7. Qual das alternativas é uma desvantagem da energia solar? \n a) Produz grandes quantidades de CO₂. \n b) Depende da intensidade da luz solar, o que pode ser limitado em alguns lugares. \n c) Pode ser utilizada continuamente, independentemente do clima.", resposta: "b" },
+            { perguntas: "8. O que significa energia geotérmica? \n a) Energia gerada pelo movimento das ondas do mar. \n b) Energia proveniente da energia interna da Terra. \n c) Energia gerada pela combustão de resíduos orgânicos.", resposta: "b" },
+            { perguntas: "9. Quais são as vantagens principais das fontes de energia renovável em relação às fontes não-renováveis? \n a) Elas são mais baratas e facilmente acessíveis. \n b) Elas não poluem o meio ambiente e são inesgotáveis. \n c) Elas geram mais empregos em indústrias de mineração.", resposta: "b" },
+            { perguntas: "10. Qual é o impacto ambiental da energia gerada por combustíveis fósseis? \n a) Não causa nenhum impacto no meio ambiente. \n b) Contribui para a emissão de gases de efeito estufa e mudanças climáticas. \n c) Pode ajudar a reduzir a poluição do ar e da água.", resposta: "b" }
+        ];
+
+        let acertos = 0;
+
+        for (let i = 0; i < perguntas.length; i++) {
+            const respostaUsuario = prompt(perguntas[i].perguntas);
+            if (respostaUsuario && respostaUsuario.toLowerCase() === perguntas[i].resposta.toLowerCase()) {
+                acertos++;
+            }
+        }
+
+        document.getElementById("msg").innerHTML = `Você acertou ${acertos} de ${perguntas.length} perguntas`;
+    });
+
+    // Função para trocar o background color
+
+    function trocar(color){
+        document.body.style.background = color;
+    }
+    </script>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./src/assets/logo.png">
+        <title>Green Energy | Code Nexus</title>
+        <!--chamando CSS externo-->
+        <link rel="stylesheet" href="./src/css/style.css">
+    </head>
+    <body>
+    
+        <header>
+            <img src="./src/assets/logo-verde-cnxs.png" alt="logo-da-equipe">
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./solucao.html">Nossa Solução</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li><a href="./quiz.html">Quiz</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <div class="changeColor">
+                        <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
+                        <input type="button" class="color" onclick="trocar('#ea8145')"/>
+                        <input type="button" class="color" onclick="trocar('#2c4969')"/>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+    
+
+</body>
+</html>
