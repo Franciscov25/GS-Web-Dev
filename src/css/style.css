@@ -301,10 +301,41 @@ header nav ul li a:hover{
     margin-top: 5%;
 }
 
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.card{
+    width: 400px;
+    border: 3px solid var(--text-color);
+    border-radius: 20px;
+    color: var(--text-color);
+    padding: 20px;
+    margin-top: 5%;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    transition: all 0.5s;
+}
 
+.card:hover{
+    background-color: var(--dark-color);
+    color: var(--second-color);
+    border: 3px solid var(--bg-color);
+}
 
+.card p{
+    font-weight: 500;
+}
 
+.card img{
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
 
 
 /*Rodapé*/
@@ -336,5 +367,3 @@ header nav ul li a:hover{
     margin: 5px 10px -10px 5px;
     padding: 5px;
 }
-
-
