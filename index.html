@@ -8,42 +8,12 @@
     <title>Green Energy | Code Nexus</title>
     <!--chamando o CSS externo-->
     <link rel="stylesheet" href="./src/css/style.css">
-    <!--chamando JS interno-->
-    <script>
-        alert('Seja bem vindo(a)!')
-
-        // Função para trocar o background color
-
-        function trocar(color){
-        document.body.style.background = color;
-        }
-
-        // criando o slideShow
-
-        // declarando as variáveis
-        let imagens = [
-            './src/assets/img1.png',
-            './src/assets/img2.png',
-            './src/assets/img3.png',
-            './src/assets/img4.png',
-            './src/assets/img5.png',
-            './src/assets/img6.png'
-        ];
-
-        let i = 0;
-        let time = 4000;
-
-        function slideShow(){
-            document.getElementById('image').src = imagens[i];
-            i++;
-            if(i == imagens.length){i=0;}
-            setTimeout('slideShow()',time)
-        }
-        slideShow();
-    </script>
+    <!--importando fonte, google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <img src="./src/assets/logo-verde-cnxs.png" alt="logo-da-equipe">
         <nav>
@@ -62,19 +32,78 @@
         </nav>
     </header>
 
-    <section class="home">
-        <div class="slideShow">
-            <img id="image"/>
-        </div>
-
-        <div class="">
-
+    <section class="main-index">
+        <div class="container-b1">
+            <div class="slideShow">
+                <img id="image" alt="slideShow-das-telas"/>
+            </div>
+            <p>Pensamos em uma gameficação, um jogo competitivo onde quem enconomiza mais energia, ganha os melhores prêmios e descontos!</p>
         </div>
 
     </section>
 
+    <footer class="rodape">
+        <div class="c-left">
+            <h2 id="title-left">Links Úteis</h2>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./solucao.html">Nossa solução</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
+        <div class="c-right">
+            <h2 id="title-right">Desenvolvedores do projeto</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/franciscovargas7/"><img src="./src/assets/linkedin.png"></a><a>Francisco Vargas</a></li>
+                <li><a href="https://www.linkedin.com/in/"><img src="./src/assets/linkedin.png"></a><a>Matheus Irizawa</a></li>
+                <li><a href="https://www.linkedin.com/in/kayque-carvalho-49a190283/"><img src="./src/assets/linkedin.png"></a><a>Kayque Carvalho</a></li>
+            </ul>
+        </div>
+        <div class="c-mid">
+            <h2>Professor Orientador</h2>
+            <ul>
+                <li><a>Wellington Cidade</a></li>
+            </ul>
+        </div>
+    </footer>
 
 
 
+    <script>
+        /* Criando slideShow */
+
+        // declarando as variaveis
+
+        let imagens = [
+            './src/assets/img1.png',
+            './src/assets/img2.png',
+            './src/assets/img3.png',
+            './src/assets/img4.png',
+            './src/assets/img5.png',
+            './src/assets/img6.png'
+        ];
+
+        let i = 0;
+        let time = 3000;
+
+        function slideShow(){
+            document.getElementById('image').src = imagens[i];
+            i++;
+            if(i == imagens.length){i=0;}
+                setTimeout('slideShow()',time)
+        }
+        slideShow();
+
+
+        // funcao para trocar background color
+        function trocar(color){
+            document.body.style.background = color;
+        }
+
+
+        alert('Seja bem vindo(a)!')
+    </script>
 </body>
 </html>
