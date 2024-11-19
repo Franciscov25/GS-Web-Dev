@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--chamando CSS externo-->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <!--adicionando icone no site-->
+    <link rel="shortcut icon" href="./src/assets/logo-verde-cnxs.png">
+    <title>Login |</title>
+</head>
+<body class="body1">
+    <div class="main-login">
+        <header>
+            <h1>Login</h1>
+        </header>
+
+        <form class="form" id="form">
+            <div class="controle">
+                <input type="text" id="nome" placeholder="digite seu usuário"/>
+                <i class="sucesso"><img src="./src/assets/sucesso.svg"/></i>
+                <i class="error"><img src="./src/assets/error.svg"/></i>
+                <small>Error</small>
+            </div>
+
+            <div class="controle">
+                <input type="email" id="email" placeholder="digite seu email"/>
+                <i class="sucesso"><img src="./src/assets/sucesso.svg"/></i>
+                <i class="error"><img src="./src/assets/error.svg"/></i>
+                <small>Error</small>
+            </div>
+
+            <div class="controle">
+                <input type="password" id="senha" placeholder="digite sua senha"/>
+                <i class="sucesso"><img src="./src/assets/sucesso.svg"/></i>
+                <i class="error"><img src="./src/assets/error.svg"/></i>
+                <small>Error</small>
+            </div>
+
+            <button type="submit" onclick="verificarCadastro()" >Login</button>
+
+        </form>
+    </div>
+
+
+
+    <!--chamando JS externo-->
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
