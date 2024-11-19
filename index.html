@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Nexus | Green Energy</title>
+    <!--adicionando icone ao lado do title-->
+    <link rel="shortcut icon" href="./src/assets/logo-verde-cnxs.png">
+    <title>Green Energy | Code Nexus</title>
+    <!--chamando o CSS externo-->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <!--chamando JS interno-->
+    <script>
+        alert('Seja bem vindo(a)!')
+
+        // Função para trocar o background color
+
+        function trocar(color){
+        document.body.style.background = color;
+        }
+
+        // criando o slideShow
+
+        // declarando as variáveis
+        let imagens = [
+            './src/assets/img1.png',
+            './src/assets/img2.png',
+            './src/assets/img3.png',
+            './src/assets/img4.png',
+            './src/assets/img5.png',
+            './src/assets/img6.png'
+        ];
+
+        let i = 0;
+        let time = 4000;
+
+        function slideShow(){
+            document.getElementById('image').src = imagens[i];
+            i++;
+            if(i == imagens.length){i=0;}
+            setTimeout('slideShow()',time)
+        }
+        slideShow();
+    </script>
 </head>
 <body>
-    
+
+    <header>
+        <img src="./src/assets/logo-verde-cnxs.png" alt="logo-da-equipe">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./solucao.html">Nossa Solução</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <div class="changeColor">
+                    <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
+                    <input type="button" class="color" onclick="trocar('#ea8145')"/>
+                    <input type="button" class="color" onclick="trocar('#2c4969')"/>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="slideShow">
+            <img id="image"/>
+        </div>
+
+        <div class="">
+
+        </div>
+
+    </section>
+
+
+
+
 </body>
 </html>
