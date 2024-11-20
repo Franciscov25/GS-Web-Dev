@@ -24,22 +24,42 @@
                 <li><a href="./quiz.html">Quiz</a></li>
                 <li><a href="./login.html">Login</a></li>
                 <div class="changeColor">
-                    <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
-                    <input type="button" class="color" onclick="trocar('#ea8145')"/>
-                    <input type="button" class="color" onclick="trocar('#2c4969')"/>
+                    <input type="button" class="color" id="btn-aClaro" onclick="trocar('#a2c2f2')"/>
+                    <input type="button" class="color" id="btn-laranja" onclick="trocar('#ea8145')"/>
+                    <input type="button" class="color" id="btn-aDark" onclick="trocar('#2c4969')"/>
                 </div>
             </ul>
         </nav>
     </header>
 
     <section class="main-index">
-        <div class="container-b1">
+        <div class="container-b1 img-icon">
             <div class="slideShow">
                 <img id="image" alt="slideShow-das-telas"/>
             </div>
-            <p>Pensamos em uma gameficação, um jogo competitivo onde quem enconomiza mais energia, ganha os melhores prêmios e descontos!</p>
+            <p class="paragrafo">Pensamos em uma gameficação, um jogo competitivo onde quem enconomiza mais energia, ganha os melhores prêmios e descontos!</p>
         </div>
 
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Premiações Mensais</h3>
+                <img src="./src/assets/img4.png" alt="img-card-1">
+                <p>Desde brindes a descontos fenomenais de até 50% em eletrodomésticos ou contas de energia!</p>
+            </div>
+
+            <div class="card">
+                <h3>Ranking</h3>
+                <img src="./src/assets/img5.png" alt="img-card-2">
+                <p>Possuímos uma tabela, onde é possível visualizar a classificação sua e de amigos!</p>
+            </div>
+
+            <div class="card">
+                <h3>Energy Coins</h3>
+                <img src="./src/assets/img6.png" alt="img-card-3">
+                <p>Basta scanear o código de barras de sua conta, e faremos a conversão dos créditos para sua carteira!</p>
+            </div>
+        </div>
     </section>
 
     <footer class="rodape">
