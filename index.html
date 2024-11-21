@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--adicionando icone ao lado do title-->
     <link rel="shortcut icon" href="./src/assets/logo-verde-cnxs.png">
-    <title>Green Energy | Code Nexus</title>
+    <title>EcoEnergy | Code Nexus</title>
     <!--chamando o CSS externo-->
     <link rel="stylesheet" href="./src/css/style.css">
     <!--importando fonte, google fonts-->
@@ -42,21 +42,21 @@
 
         <div class="card-container">
 
-            <div class="card">
+            <div class="card jump-card">
                 <h3>Premiações Mensais</h3>
-                <img src="./src/assets/img4.png" alt="img-card-1">
+                <img src="./src/assets/img4bg.png" alt="img-card-1">
                 <p>Desde brindes a descontos fenomenais de até 50% em eletrodomésticos ou contas de energia!</p>
             </div>
 
-            <div class="card">
+            <div class="card jump-card">
                 <h3>Ranking</h3>
-                <img src="./src/assets/img5.png" alt="img-card-2">
+                <img src="./src/assets/img5bg.png" alt="img-card-2">
                 <p>Possuímos uma tabela, onde é possível visualizar a classificação sua e de amigos!</p>
             </div>
 
-            <div class="card">
+            <div class="card jump-card">
                 <h3>Energy Coins</h3>
-                <img src="./src/assets/img6.png" alt="img-card-3">
+                <img src="./src/assets/img6bg.png" alt="img-card-3">
                 <p>Basta scanear o código de barras de sua conta, e faremos a conversão dos créditos para sua carteira!</p>
             </div>
         </div>
@@ -124,6 +124,20 @@
 
 
         alert('Seja bem vindo(a)!')
+
+
+        // Seleciona todos os elementos com a classe "jump-card" e faz o jump de 50px
+        const cards = document.getElementsByClassName("jump-card");
+
+        // Itera sobre cada elemento e adiciona os eventos
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("mouseover", function() {
+            this.style.transform = "translateY(-50px)";
+            });
+            cards[i].addEventListener("mouseout", function() {
+            this.style.transform = "translateY(0)";
+            });
+        }
     </script>
 </body>
 </html>
